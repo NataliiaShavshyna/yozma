@@ -154,6 +154,8 @@ public class ShippingPage extends WebEntity {
      * @return the shipping method
      */
     public WebElement getShippingMethod() {
+        WebDriverWait wait = new WebDriverWait(webDriver, 30);
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//input[contains(@name,'ko_unique_')]"), 0));
         return webDriver.findElement(
                 By.xpath("//input[contains(@name,'ko_unique_')]"));
     }

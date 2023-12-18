@@ -25,11 +25,8 @@ public class Header extends WebEntity {
      */
     public void waitUntilCartIsNotEmpty() {
 
-        WebDriverWait wait = new WebDriverWait(webDriver, 30);
+        WebDriverWait wait = new WebDriverWait(webDriver, 60);
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//div[@class='message-success success message']"),1));
-
-
-
     }
 }
 
