@@ -13,9 +13,11 @@ public class TestRequired extends BaseTest {
      */
     @Test
     public void testFullFlow() {
+
+        HomePage.homePage().navigateTo("https://magento.softwaretestingboard.com/");
         MenuComponent menu = new MenuComponent();
         menu.waitUntilMenuLoaded();
-        HomePage.homePage().navigateTo("https://magento.softwaretestingboard.com/");
+
         menu.getMenu().hoverMenuItemByName("Gear").clickSubMenuItemByName("Bags");
         CatalogPage catalog = new CatalogPage();
         catalog.waitUntilPageLoaded();

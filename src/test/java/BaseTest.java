@@ -20,7 +20,7 @@ public class BaseTest {
      */
     @BeforeTest(alwaysRun = true)
     @Parameters(value = {"browser"})
-    public void startBrowserTest(@Optional("chrome") String browser) {
+    public void startBrowserTest(@Optional("firefox") String browser) {
         String browserUpperCase = browser.toUpperCase();
         LOGGER.debug("Executing tests on: {}", browserUpperCase);
         WebDriverFactoryMy.setWebDriver(browser);
